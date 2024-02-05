@@ -51,3 +51,6 @@ src/views VS src/layouts 구분해서 사용
 	- Mounted : 마운트 ★	-> 가상 DOM이 생성 된 후 할당, 랜더링O (보여지는 시점) 
 	- Updated : 수정		-> 수정, 반영 Mounted <-> Updated 를 왔다갔다 함, 사용X 금지
 	- destroyed : 소멸 	-> 해체단계, 잘 사용X
+	
+6. views/ - UserListView.vue 코드작성
+ : axios 사용, created, mounted, methods 작성
