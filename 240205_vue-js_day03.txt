@@ -1,0 +1,53 @@
+새로고침 하더라도 store의 정보가 남아 있어야할 경우!! 추가적으로 설치해야함
+
+[vuex-persistedstate] : 웹브라우저의 localStorage에 저장 
+=> cookie랑 비슷함(https://ko.javascript.info/localstorage)
+
+설치 : npm install vuex-persistedstate
+
+=> 사용법은 https://www.npmjs.com/package/vuex-persistedstate
+
+
+
+======================
+[오후] node.js + vue.js
+1. DB구축 -> sql문 작성 -> express서버구축
+
+dbSetting.env 설정 ==> 앞뒤로 공백없어야함!
+key 		= value
+MYSQL_HOST 	= 127.0.0.1
+...
+
+fetch와 유사한 개념 : node.js와 브라우저를 위한 Promise 기반 HTTP 클라이언트
+1. Axios API 
+2. 요청 Config
+3. 응답 스키마
+[axios] : https://axios-http.com/kr/docs/api_intro
+
+[axios 옵션들]
+https://axios-http.com/kr/docs/req_config
+
+=======프로젝트 Setting 부분===========
+[화면단]
+1.
+★Vue -> 태그를 직접 제어하기 위해서는 $refs 사용하기! 
+DOM을 직접 제어하는 자바스크립트 사용하지 않기! => vue방식으로 사용하기!!
+
+2.
+public/index.html 에 공통 cdn추가하기, 배포시에는 cdn X
+
+3.
+src/views VS src/layouts 구분해서 사용
+
+4. App.vue 셋팅
+	하위 컨포넌트
+	layouts/ - HeaderComponent : <a>를 <router-link>로 변환, href -> to로 변환
+		views/ - UserListView.vue
+
+5. axios 설치하기 npm install axios
+
+	#LifeCycle Hook
+	- Created : 생성 ★	-> 데이터, 이벤트에 대한 접근의 시작, 가능함, 랜더링 X
+	- Mounted : 마운트 ★	-> 가상 DOM이 생성 된 후 할당, 랜더링O (보여지는 시점) 
+	- Updated : 수정		-> 수정, 반영 Mounted <-> Updated 를 왔다갔다 함, 사용X 금지
+	- destroyed : 소멸 	-> 해체단계, 잘 사용X

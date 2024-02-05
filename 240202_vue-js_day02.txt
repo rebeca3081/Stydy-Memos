@@ -1,0 +1,15 @@
+24.02.02(금)_vue.js_day2
+
+깃허브 주소
+https://github.com/rebeca3081/vue-project.git
+
+[board-project 구조]
+App.vue
+	- HomeView
+	- AboutView
+	- BoardView
+		- Header / Foot / BoardList / BoardWrite / BoardRead Component
+		
+		
+[Todo 템플릿]
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_todo

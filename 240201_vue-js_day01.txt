@@ -1,0 +1,8 @@
+[24.02.01 - Vue.js(Day-01)]
+
+Vue.js 설치하기(p44~)
+
+[집] node_modules 폴더는 git (x) ==>  npm install 하기
+
+# 컴포넌트
+# 바인딩
