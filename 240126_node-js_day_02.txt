@@ -1,0 +1,12 @@
+24.01.26 (금)
+
+[API]
+https://reqres.in/
+
+https://reqres.in/api/users?page=2
+
+[웹소켓]
+https://developer.mozilla.org/ko/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications
+
+[알라딘 API CORS 시도해보기]
+https://reese-dev.netlify.app/issue_archive/aladin_cors/

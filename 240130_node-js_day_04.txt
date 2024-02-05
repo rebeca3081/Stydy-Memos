@@ -1,0 +1,7 @@
+[MySQL] 설치
+- ANSI Join 사용하기!
+https://dev.mysql.com/downloads/installer/
+
+
+
+프로젝트시에는 -> MariaDB

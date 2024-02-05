@@ -1,0 +1,9 @@
+[express] node framWork
+- 깃허브에 올리지 않는것
+: node_modules / package-lock.json
+
+/search
+http://localhost:3000/search?dept=sale&city=daegu
+http://localhost:3000/search?id=100&name=hong
+
+서블릿 필터? ==미들웨어?

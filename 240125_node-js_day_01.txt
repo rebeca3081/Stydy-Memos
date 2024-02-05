@@ -1,0 +1,20 @@
+24.01.25 [node.js 수업 시작!]
+[node.js]
+- 설치
+https://nodejs.org/en
+LTS로 설치
+
+- Docs
+https://nodejs.org/docs/latest/api/
+
+[VSCode]
+- Dev 폴더에 새 작업영역 폴더 생성
+- 터미널 세팅 바꾸기
+: default~~ -> cmd로
+
+- terminal 에서 버전확인이 실행되지 않는경우
+https://it-noongam.tistory.com/19 -> powershell 관리자 권한으로 실행
+
+[집git연동]
+
+새폴더 만들기 - View - command창 - git주소 복붙 - 새폴더 선택 - OK

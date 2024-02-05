@@ -1,0 +1,119 @@
+24.01.31(수)
+
+1. MySQL(3계층) vs ANSI 표준(4계층)
+ : 오라클 스키마=계정
+ 
+2. MySQL의 문법
+
+	1) 데이터 타입 : 데이터 대소문자 구분 X
+	
+	<Oracle>			<MySQL>
+	------------------------------------------------------
+	CHAR			-> 	CHAR
+	VARCHAR2		->	VARCHAR / TEXT(대용량 문자형 데이터)
+	NUMBER      	->	정수(INT, BIGINT) / 실수(FLOAT, BOUBLE)
+	DATE			->	DATE(YYYY-MM-DD) 
+	(YYYY/MM/DD)		TIME(HH:MM:SS)
+						DATETIME
+					
+	2) 함수
+	<Oracle>			<MySQL>
+	------------------------------------------------------
+	NVL				->	IFNULL(컬럼, 대체값)
+	LIKE[문자연결]
+	'%'||'문자'||'%'	->	CONCAT(CONCAT('%','문자'),'%')
+	[형변환]			
+	TO_CHAR			->	CAST(대상 AS 타입)
+	TO_DATE				DATE_FORMAT(값, 출력포맷)
+	TO_NUMBER							%Y%m%d : 날짜포맷은 공식문서 체크하기
+	
+	3) 제약조건
+	SEQUENCE		->	AUTO_INCREMENT (최대값+1, INT, PRIMARY KEY, 초기값X)
+	
+	4) 컬럼명 : _, 대문자 그대로 mapping 이됨! 주의!
+	
+	
+3. MySQL 모듈 (node.js)
+	1) mysql, mysql2 모듈 : Connection Pool
+	2) dotenv 모듈 : 보안상 중요 데이터 -> 환경변수로 등록 
+		.env 파일로 따로 저장, 오픈 클라우드에 올리지 말것!
+	3) SQL문 실행 : 
+		- query() 함수
+		- nodemon(node monitor)모듈 : 변경사항을 감시
+		
+ # 모듈 설치
+ npm install express
+ npm install mysql
+ npm install dotenv
+ 
+ npm install --save-dev nodemon => 개발환경에서만 적용될 수 있도록 옵션을 줌
+ 
+ (1) SQL문 	-> .js
+ (2) MySQL 	-> .js :실행요청
+ (3) app.js -> .js 
+ 
+ # nodemon 실행
+ nodemon app.js -> 동일한 디렉터리 파일의 변경사항을 감시
+ nodemon --watch app.js 특정 디렉터리
+ 
+ ## script에 등록된 단축어를 실행할 때
+ npm run test
+ npm run dev : 개발환경에서만 적용되어서 단축어 등록 후 사용함
+ 
+ [ POST -> req.body.param]
+ 1. queryString 
+	param = value
+
+ 2. JSON 
+ POST -> req.body.param
+{
+	"param" : {
+		"name" : "Jang Hyoeun",
+		"email" : "hyoeun@mail.com",
+		"phone" : "010-6403-6403",
+		"address" : "Deagu" // 없어도 가능
+	}
+}
+
+
+==> 실행 결과
+OkPacket {
+	fieldCount: 0,
+	affectedRows: 1,
+	insertId: 2,
+	serverStatus: 2,
+	warningCount: 0,
+	message: '',
+	protocol41: true,
+	changedRows: 0
+}
+
+
+
+===== 수정
+(1) UpdateAll
+{
+	"param" : {
+		"id": 2,
+		"name": "Kim",
+		"email": "kims@mail.com",
+		"phone": "010-6403-0000",
+		"address": null
+	}
+}
+delete param.id
+
+==> 실행 결과
+{
+	"fieldCount": 0,
+	"affectedRows": 1,
+	"insertId": 0,
+	"serverStatus": 2,
+	"warningCount": 0,
+	"message": "(Rows matched: 1  Changed: 1  Warnings: 0",
+	"protocol41": true,
+	"changedRows": 1
+}
+
+숙제숙제에에에에에
+★★★테이블 변경해서 전체조회, 단건조회, 수정, 삭제해보기★★★
