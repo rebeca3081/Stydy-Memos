@@ -1,0 +1,44 @@
+vue3 기본으로 설치 -> vue add router
+
+npm init
+npm install --force(의존성해결 옵션)
+npm update
+npm run "명령어" - package.json에 script 명령어 실행
+
+========================
+1. CORS Error
+개발하는동안 proxy server를 돌리게됨!! => Header정보를 변경함(origin이 같게 함)
+
+==> vue.config.js에서 proxy 설정 (실제 서버측 origin으로 대체)
+https://cli.vuejs.org/config/#devserver
+
+2. <template> : 랜더링 X 기억하기 v-for 반복되는부분 사용 / v-if로 실제 자식태그에 조건을 걸수 있음
+https://developer.mozilla.org/ko/docs/Web/HTML/Element/template
+
+3. <단건조회>
+v-on:click v-on의 속성 찾아보기!
+
+클릭이벤트 실행 시
+router로 넘기고 route로 받고
+
+/* changeGender() {
+      let map = {
+        "M" : "남",
+        "F" : "여"
+      };
+      return map[this.userInfo.user_gender]
+    } */
+	
+	
+4. <등록>
+
+[POST] http://localhost:4000/users
+
+{
+	"param" : {
+		"user_no" -> 불필요한 값은 아예 제외!
+		"user_id" : "user02",
+		"user_pwd" : "1234",
+		"user_name" : Hong"
+	}
+}
